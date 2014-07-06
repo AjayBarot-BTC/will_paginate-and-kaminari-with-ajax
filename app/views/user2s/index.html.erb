@@ -1,0 +1,21 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+   <tbody id="users">
+   <%= render @user2s %>
+    <div id="paginator">
+    <%= paginate @user2s, :remote => true %>
+    </div>
+    </tbody>
+</table>
+<br>
+<%= link_to 'New User', new_user2_path %>
